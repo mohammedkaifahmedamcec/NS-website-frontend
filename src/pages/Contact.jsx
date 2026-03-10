@@ -15,6 +15,7 @@ export default function Contact() {
     full_name: "",
     email: "",
     phone: "",
+    organisation: "",
     service_interested_in: "",
     message: "",
   });
@@ -140,6 +141,19 @@ export default function Contact() {
               value={form.phone}
               onChange={(e) =>
                 setForm({ ...form, phone: e.target.value })
+              }
+              className="w-full mt-1 bg-[#0B0F14] border border-white/10 rounded-lg px-3 py-2
+                         text-white focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] outline-none"
+            />
+          </div>
+
+          <div>
+            <label className="text-sm text-slate-300">Company/Institution *</label>
+            <input  
+              required
+              value={form.organisation}
+              onChange={(e) =>
+                setForm({ ...form, organisation: e.target.value })
               }
               className="w-full mt-1 bg-[#0B0F14] border border-white/10 rounded-lg px-3 py-2
                          text-white focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] outline-none"
